@@ -1,12 +1,8 @@
 import React from "react";
-import "./App.css";
+import { LoadingPage } from "./pages/LoadingPage";
 
-const App = () => {
-  return (
-    <div className="App">
-      <h1>React Poke App</h1>
-    </div>
-  );
+const App = (): JSX.Element => {
+  return <LoadingPage />;
 };
 
 export default App;
