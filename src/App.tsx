@@ -1,8 +1,14 @@
 import React from "react";
-import { LoadingPage } from "./pages/LoadingPage";
+import { PageContainer } from "./components";
+import "./global.scss";
+import { AllRoutes } from "./routes";
 
 const App = (): JSX.Element => {
-  return <LoadingPage />;
+  return (
+    <PageContainer>
+      <AllRoutes />
+    </PageContainer>
+  );
 };
 
 export default App;
