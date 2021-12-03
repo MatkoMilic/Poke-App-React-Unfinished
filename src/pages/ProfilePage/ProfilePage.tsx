@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfilePage = () => {
+const ProfilePage = (): JSX.Element => {
   return (
     <div className="ProfilePage">
       <h1>Your profile</h1>

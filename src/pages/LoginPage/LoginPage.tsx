@@ -1,13 +1,10 @@
 import React from "react";
-import { PageContainer } from "../../components";
 
-const LoginPage = () => {
+const LoginPage = (): JSX.Element => {
   return (
-    <PageContainer>
-      <div className="LoginPage">
-        <h1>Please login in</h1>
-      </div>
-    </PageContainer>
+    <div className="LoginPage">
+      <h1>Please login in</h1>
+    </div>
   );
 };
 

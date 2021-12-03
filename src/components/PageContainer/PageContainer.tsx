@@ -1,5 +1,6 @@
 import React from "react";
-import style from "./Styles.module.scss";
+import Header from "../Header/Header";
+import classes from "./Styles.module.scss";
 
 interface PageContainerProps {
   children?: React.ReactNode;
@@ -10,7 +11,12 @@ const PageContainer: React.FC<PageContainerProps> = ({
   children,
   styles,
 }): JSX.Element => {
-  return <div className={`${style.container} ${styles}`}>{children}</div>;
+  return (
+    <>
+      <Header />
+      <div className={`${classes.container} ${styles}`}>{children}</div>
+    </>
+  );
 };
 
 PageContainer.defaultProps = {
