@@ -1,13 +1,10 @@
 import React from "react";
-import { PageContainer } from "../../components";
 
-const PokeListPage = () => {
+const PokeListPage = (): JSX.Element => {
   return (
-    <PageContainer>
-      <div className="PokeListPage">
-        <h1>List of pokemons is here</h1>
-      </div>
-    </PageContainer>
+    <div className="PokeListPage">
+      <h1>List of pokemons is here</h1>
+    </div>
   );
 };
 
