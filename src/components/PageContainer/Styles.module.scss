@@ -1,0 +1,11 @@
+$background-color: #bada55;
+
+.container {
+  width: 100%;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $background-color;
+}
