@@ -1,11 +1,13 @@
-$background-color: #bada55;
+@import "./../../styles/variables.scss";
 
 .container {
-  width: 100%;
-  text-align: center;
-  min-height: 100vh;
+  height: calc(100vh - #{$headerHeight});
+  background: $bg;
   display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: $background-color;
+  align-items: center;
+
+  h1 {
+    color: red;
+  }
 }
