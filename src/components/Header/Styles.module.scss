@@ -1,5 +1,10 @@
 @import "./../../styles/variables.scss";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .header {
   background: $dark;
   width: 100%;

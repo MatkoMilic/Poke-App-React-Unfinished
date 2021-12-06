@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import classes from "./Header.module.scss";
+import classes from "./Styles.module.scss";
 import { Link, Outlet } from "react-router-dom";
+import { ThemeContext } from "../ThemeProvider";
 
 interface ISize {
   width: number;
@@ -11,7 +12,8 @@ interface ISize {
 
 const Header = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [size, setSize] = useState<ISize>({ width: 0, height: 0 });
+  const [size, setSize] = useState<ISize>();
+  const { toggleTheme } = React.useContext(ThemeContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,10 +27,10 @@ const Header = (): JSX.Element => {
   }, []);
 
   useEffect(() => {
-    if (size.width > 768 && menuOpen) {
+    if (size && size.width > 768 && menuOpen) {
       setMenuOpen(false);
     }
-  }, [size.width, menuOpen]);
+  }, [size?.width, menuOpen, size]);
 
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
@@ -42,7 +44,7 @@ const Header = (): JSX.Element => {
         </Link>
         <nav
           className={`${classes.header__content__nav} ${
-            menuOpen && size.width < 768 ? classes.isMenu : ""
+            menuOpen && size && size.width < 768 ? classes.isMenu : ""
           }`}
         >
           <ul>
@@ -65,6 +67,9 @@ const Header = (): JSX.Element => {
               <Link to="/profilepage" onClick={menuToggleHandler}>
                 Profile
               </Link>
+            </li>
+            <li>
+              <button onClick={toggleTheme}>Toggle Theme</button>
             </li>
             <Outlet />
           </ul>
