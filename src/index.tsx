@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";
+import { ThemeProvider } from "./components";
 
 ReactDOM.render(
   <React.StrictMode>
