@@ -3,7 +3,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Styles.module.scss";
 import { Link, Outlet } from "react-router-dom";
-import { ThemeContext } from "../ThemeProvider/ThemeProvider";
+import { ThemeContext } from "../ThemeProvider";
 
 interface ISize {
   width: number;

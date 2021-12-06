@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../Header/Header";
+import { Header } from "../Header";
 import classes from "./Styles.module.scss";
 import classnames from "classnames";
-import { ThemeContext } from "../ThemeProvider/ThemeProvider";
+import { ThemeContext } from "../ThemeProvider";
 interface PageContainerProps {
   children?: React.ReactNode;
   styles?: React.CSSProperties;
