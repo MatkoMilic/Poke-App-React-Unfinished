@@ -1,13 +1,28 @@
 @import "./../../styles/variables.scss";
 
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
 .container {
   height: calc(100vh - #{$headerHeight});
-  background: $bg;
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
 
   h1 {
-    color: red;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.containerdark {
+  height: calc(100vh - #{$headerHeight});
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: rgb(255, 255, 255);
   }
 }
