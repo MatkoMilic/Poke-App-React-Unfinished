@@ -7,3 +7,5 @@ export { TextField } from "./TextField";
 export { Header } from "./Header";
 export { HeaderLogin } from "./HeaderLogin";
 export { ProtectedRoutes } from "./ProtectedRoutes";
+export { PokemonList } from "./PokemonList";
+export { RQClientProvider } from "./RQClientProvider";

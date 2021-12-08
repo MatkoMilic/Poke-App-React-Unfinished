@@ -1,13 +1,27 @@
 import React from "react";
-import { PageContainer } from "../../components";
+import Loader from "react-loader-spinner";
+import { PageContainer, PokemonList } from "../../components";
 import classes from "./Styles.module.scss";
+import { usePokemons } from "../../utils";
 
-const PokeListPage = (): JSX.Element => {
+const PokeListPage: React.FC = () => {
+  const { status, data } = usePokemons();
   return (
     <PageContainer>
-      <div className={classes.PokeListPage}>
-        <h1>List of pokemons is here</h1>
-      </div>
+      {status === "loading" ? (
+        <Loader type="Puff" />
+      ) : status === "error" ? (
+        <h4>Unable to process this request at the moment</h4>
+      ) : status === "success" && data ? (
+        <div>
+          <h1>Here is the list of our Pokemons!</h1>
+          <ol className={classes.orderedListOfPokemons}>
+            {data.map((pokemon) => (
+              <PokemonList dataPokemon={pokemon} key={pokemon.url} />
+            ))}
+          </ol>
+        </div>
+      ) : null}
     </PageContainer>
   );
 };
