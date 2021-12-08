@@ -1,12 +1,14 @@
 import React from "react";
-import { RQClientProvider } from "./components";
+import { RQClientProvider, UserDetailsProvider } from "./components";
 import "./global.scss";
 import { AllRoutes } from "./routes";
 
 const App = (): JSX.Element => {
   return (
     <RQClientProvider>
-      <AllRoutes />
+      <UserDetailsProvider>
+        <AllRoutes />
+      </UserDetailsProvider>
     </RQClientProvider>
   );
 };
