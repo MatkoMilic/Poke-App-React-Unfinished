@@ -49,16 +49,6 @@ const Header = (): JSX.Element => {
         >
           <ul>
             <li>
-              <Link to="/loginpage" onClick={menuToggleHandler}>
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link to="/settingspage" onClick={menuToggleHandler}>
-                Settings
-              </Link>
-            </li>
-            <li>
               <Link to="/pokelistpage" onClick={menuToggleHandler}>
                 Pokemons
               </Link>
@@ -66,6 +56,11 @@ const Header = (): JSX.Element => {
             <li>
               <Link to="/profilepage" onClick={menuToggleHandler}>
                 Profile
+              </Link>
+            </li>
+            <li>
+              <Link to="/optionspage" onClick={menuToggleHandler}>
+                Options
               </Link>
             </li>
             <li>
