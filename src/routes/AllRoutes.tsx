@@ -5,18 +5,21 @@ import {
   LoginPage,
   PokeListPage,
   ProfilePage,
-  SettingsPage,
+  OptionsPage,
 } from "../pages";
 import "../global.scss";
+import ProtectedRoutes from "../components/ProtectedRoutes/ProtectedRoutes";
 
 const AllRoutes = (): JSX.Element => {
   return (
     <Routes>
-      <Route path="/loadingpage" element={<LoadingPage />} />
+      <Route path="/" element={<LoadingPage />} />
       <Route path="/loginpage" element={<LoginPage />} />
-      <Route path="/settingspage" element={<SettingsPage />} />
-      <Route path="/pokelistpage" element={<PokeListPage />} />
-      <Route path="/profilepage" element={<ProfilePage />} />
+      <Route element={<ProtectedRoutes />}>
+        <Route path="/optionspage" element={<OptionsPage />} />
+        <Route path="/pokelistpage" element={<PokeListPage />} />
+        <Route path="/profilepage" element={<ProfilePage />} />
+      </Route>
     </Routes>
   );
 };
