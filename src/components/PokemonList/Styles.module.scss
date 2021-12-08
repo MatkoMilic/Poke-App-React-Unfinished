@@ -1,0 +1,11 @@
+@import "./../../styles/variables.scss";
+
+.PokemonListLight {
+  font-size: medium;
+  color: $dark;
+}
+
+.PokemonListDark {
+  font-size: medium;
+  color: $light;
+}
