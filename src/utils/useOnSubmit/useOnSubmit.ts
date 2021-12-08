@@ -1,8 +1,13 @@
 import { IUserValues } from "../../types";
 import { useNavigate } from "react-router-dom";
 
-const useOnSubmit = () => {
+interface IUseOnSubmit {
+  onSubmitRedirect: (email: string, password: string) => Promise<void>;
+}
+
+const useOnSubmit = (): IUseOnSubmit => {
   const navigate = useNavigate();
+
   const signUpUser = (email: string, password: string) => {
     try {
       const userDetails: IUserValues = {
@@ -38,6 +43,7 @@ const useOnSubmit = () => {
       logUserIn(email, password);
     }
   };
+
   return { onSubmitRedirect };
 };
 
