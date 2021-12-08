@@ -8,7 +8,7 @@ interface PageContainerProps {
   styles?: React.CSSProperties;
 }
 
-const PageContainer: React.FC<PageContainerProps> = ({
+export const PageContainer: React.FC<PageContainerProps> = ({
   children,
   styles,
 }): JSX.Element => {
@@ -34,5 +34,3 @@ PageContainer.defaultProps = {
   children: undefined,
   styles: undefined,
 };
-
-export default PageContainer;
