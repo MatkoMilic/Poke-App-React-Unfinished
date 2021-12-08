@@ -1,14 +1,12 @@
 import React from "react";
-import { PageContainer } from "../../components";
+import { MyProfileCard, PageContainer } from "../../components";
 
-const ProfilePage = (): JSX.Element => {
+const ProfileScreen = () => {
   return (
     <PageContainer>
-      <div className="ProfilePage">
-        <h1>Your profile</h1>
-      </div>
+      <MyProfileCard />
     </PageContainer>
   );
 };
 
-export default ProfilePage;
+export default ProfileScreen;
