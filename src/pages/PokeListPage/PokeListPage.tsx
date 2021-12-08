@@ -2,7 +2,6 @@ import React from "react";
 import Loader from "react-loader-spinner";
 import { PageContainer, PokemonList } from "../../components";
 import classes from "./Styles.module.scss";
-import { IPokemon } from "../../types";
 import { usePokemons } from "../../utils";
 
 const PokeListPage: React.FC = () => {
