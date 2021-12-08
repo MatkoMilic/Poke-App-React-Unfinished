@@ -10,7 +10,7 @@ interface ISize {
   height: number;
 }
 
-const Header = (): JSX.Element => {
+const HeaderLogin = (): JSX.Element => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [size, setSize] = useState<ISize>();
   const { toggleTheme } = React.useContext(ThemeContext);
@@ -40,7 +40,7 @@ const Header = (): JSX.Element => {
     <header className={classes.header}>
       <div className={classes.header__content}>
         <Link to="/" className={classes.header__content__logo}>
-          HOME
+          2FRONT
         </Link>
         <nav
           className={`${classes.header__content__nav} ${
@@ -48,21 +48,6 @@ const Header = (): JSX.Element => {
           }`}
         >
           <ul>
-            <li>
-              <Link to="/pokelistpage" onClick={menuToggleHandler}>
-                Pokemons
-              </Link>
-            </li>
-            <li>
-              <Link to="/profilepage" onClick={menuToggleHandler}>
-                Profile
-              </Link>
-            </li>
-            <li>
-              <Link to="/optionspage" onClick={menuToggleHandler}>
-                Options
-              </Link>
-            </li>
             <li>
               <button onClick={toggleTheme}>Toggle Theme</button>
             </li>
@@ -81,4 +66,4 @@ const Header = (): JSX.Element => {
   );
 };
 
-export default Header;
+export default HeaderLogin;

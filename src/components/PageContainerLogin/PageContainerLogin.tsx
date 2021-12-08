@@ -1,14 +1,15 @@
 import React from "react";
-import { Header } from "../Header";
 import classes from "./Styles.module.scss";
 import classnames from "classnames";
 import { ThemeContext } from "../ThemeProvider";
+import HeaderLogin from "../HeaderLogin/HeaderLogin";
+
 interface PageContainerProps {
   children?: React.ReactNode;
   styles?: React.CSSProperties;
 }
 
-export const PageContainer: React.FC<PageContainerProps> = ({
+export const PageContainerLogin: React.FC<PageContainerProps> = ({
   children,
   styles,
 }): JSX.Element => {
@@ -16,9 +17,8 @@ export const PageContainer: React.FC<PageContainerProps> = ({
 
   return (
     <>
-      <Header />
+      <HeaderLogin />
       <div
-        id="container"
         className={classnames(classes.container, {
           [classes.containerdark]: isThemeDark,
         })}
@@ -30,7 +30,7 @@ export const PageContainer: React.FC<PageContainerProps> = ({
   );
 };
 
-PageContainer.defaultProps = {
+PageContainerLogin.defaultProps = {
   children: undefined,
   styles: undefined,
 };

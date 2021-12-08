@@ -1,5 +1,5 @@
-export { LoadingPage } from "./LoadingPage/index";
-export { LoginPage } from "./LoginPage/index";
-export { PokeListPage } from "./PokeListPage/index";
-export { ProfilePage } from "./ProfilePage/index";
-export { SettingsPage } from "./SettingsPage/index";
+export { LoadingPage } from "./LoadingPage";
+export { LoginPage } from "./LoginPage";
+export { PokeListPage } from "./PokeListPage";
+export { ProfilePage } from "./ProfilePage";
+export { OptionsPage } from "./OptionsPage";
