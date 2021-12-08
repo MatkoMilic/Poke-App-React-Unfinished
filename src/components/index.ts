@@ -9,3 +9,6 @@ export { HeaderLogin } from "./HeaderLogin";
 export { ProtectedRoutes } from "./ProtectedRoutes";
 export { PokemonList } from "./PokemonList";
 export { RQClientProvider } from "./RQClientProvider";
+export { MyProfileCard } from "./MyProfileCard";
+export { PokemonAttributes } from "./PokemonAttributes";
+export { UserDetailsContext, UserDetailsProvider } from "./UserDetailsProvider";
