@@ -11,7 +11,7 @@ const useAuth = (): boolean => {
   return loggedIn;
 };
 
-const ProtectedRoutes = () => {
+const ProtectedRoutes = (): JSX.Element => {
   const isAuth = useAuth();
   return isAuth ? <Outlet /> : <LoginPage />;
 };
